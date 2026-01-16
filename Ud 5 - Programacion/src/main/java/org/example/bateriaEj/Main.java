@@ -3,10 +3,21 @@ package org.example.bateriaEj;
 public class Main {
     public static void main(String[] args) {
 
-    Televisor programa = new Televisor(1, 5);
+    Televisor lg = new Televisor(5, 50);
 
 
-        programa.ImprimirInfoCanal();
+        lg.subirCanal();
+        lg.subirCanal();
+        lg.subirCanal();
+        lg.bajarVolumen();
+        lg.bajarVolumen();
+        lg.bajarCanal();
+        lg.subirVolumen();
+
+        System.out.println(lg.getCanal() + " " + lg.getVolumen());
+
+        Televisor samsung = new Televisor();
+        System.out.println(samsung.getCanal() + " " + samsung.getVolumen());
 
     }
 }
