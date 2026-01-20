@@ -2,6 +2,8 @@ package org.example.bateriaEj;
 
 import java.util.Random;
 
+import static java.lang.Integer.parseInt;
+
 public class Paciente {
 
     private static final char DEF_GENERO = 'X';
@@ -19,21 +21,21 @@ public class Paciente {
     public Paciente (String nombre, int edad, char genero, double peso, int altura) {
         this.nombre = nombre;
         this.edad = edad;
-        DNI = generarDNI();
         this.genero = genero;
         this.peso = peso;
         this.altura = altura;
+        DNI = generarDNI();
     }
 
     public Paciente() {
         this(null, 0, DEF_GENERO, 0, 0);
     }
 
-    public char letraDNI(int res) {
+    public char letraDNI() {
 
-        int DNInum = Integer.parseInt(DNI);
-        res = (DNInum/23);
-        char letras[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
+        int DNInum = parseInt(DNI);
+        int res = (DNInum / 23);
+        char[] letras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
                 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z',
                 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         return letras[res];
@@ -52,11 +54,15 @@ public class Paciente {
             DNI = DNI + num;
         }
 
-        return DNI+letraDNI(Integer.parseInt(DNI)%23);
+        return DNI+letraDNI();
     }
 
     public int calcularIMC() {
-        double resultado = peso/Math.pow(altura,2);
+
+        double resultado = peso/Math.pow((double) altura/100,2);
+
+        System.out.println(resultado);
+
         if (resultado < 20) {
             return DEF_INFRAPESO;
         } else if (resultado > 25) {
@@ -64,6 +70,16 @@ public class Paciente {
         } else {
             return DEF_SOBREPESO;
         }
+    }
+
+    public char validarGenero (char genero) {
+
+        if (genero == 'H' || genero == 'M') {
+            return genero;
+        } else {
+            return DEF_GENERO;
+        }
+
     }
 
     public String getNombre() {
@@ -108,6 +124,20 @@ public class Paciente {
 
     public void setAltura(int altura) {
         this.altura = altura;
+    }
+
+    public boolean esMayorDeEdad() {
+        if (edad >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+
+    public String toString() {
+        return "Pacioente [nombre = " + nombre + " edad = " + edad + " DNI = " + DNI + " genero = " + genero + " peso = " + peso + " altura = " + altura + "]";
     }
 
 }
