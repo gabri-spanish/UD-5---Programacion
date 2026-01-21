@@ -9,10 +9,17 @@ public class EstudianteA {
 
         System.out.println(jorge.getNia());
         System.out.println(jorge);
+
         Estudiante raul = new Estudiante("raul");
 
         System.out.println(raul.getNia());
         System.out.println(raul);
+
+        Estudiante adrian = new Estudiante("adrian");
+
+        System.out.println("Hay " + Estudiante.obtenerTotalEstudiantes() + " estudiantes");
+
+        System.out.println(Estudiante.validarCorreo("patri@alu.edu.gva.es"));
     }
 
 
