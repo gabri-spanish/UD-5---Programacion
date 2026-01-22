@@ -10,6 +10,7 @@ public class libro {
     private static String titulo;
     private static String autor;
     private static boolean disponible;
+    private Estudiante estudiantePrestado;
 
     public libro(String titulo, String autor) {
 
@@ -19,6 +20,7 @@ public class libro {
         id = generarID();
         cantidadLibros++;
         librosDisponibles++;
+        estudiantePrestado = new Estudiante("");
 
     }
 
@@ -26,21 +28,25 @@ public class libro {
         return CADENA_ID+cantidadLibros;
     }
 
-    public void prestar() {
+    public void prestar(Estudiante estudiante){
         if (disponible) {
             disponible = false;
             System.out.println("El libro " + titulo + " ha sido prestado");
             librosDisponibles--;
+            estudiantePrestado = estudiante;
+            estudiante.setLibro(this);
         } else {
             System.out.println("El libro " + titulo + " no está disponible");
         }
     }
 
-    public void devolver() {
+    public void devolver(Estudiante estudiante) {
         if (!disponible) {
             disponible = true;
             System.out.println("El libro " + titulo + " ha sido devuelto");
             librosDisponibles++;
+            estudiantePrestado.setLibro(null);
+            estudiantePrestado = null;
         } else {
             System.out.println("El libro " + titulo + " no se puede devolver ya que está disponible para prestar");
         }
@@ -98,19 +104,24 @@ public class libro {
         return cantidadLibros;
     }
 
+    public Estudiante getEstudiantePrestado() {
+        return estudiantePrestado;
+    }
+
+    public void setEstudiantePrestado(Estudiante estudiantePrestado) {
+        this.estudiantePrestado = estudiantePrestado;
+    }
+
     @Override
     public String toString() {
-        return "libro { Total de libros creados: " + cantidadLibros +
-                " " +
+        return "libro{" +
+                "Total de libros creados: " + cantidadLibros +
                 "Libros disponibles: " + librosDisponibles +
-                " " +
                 "ID del libro: " + id +
-                " " +
                 "Título del libro: " + titulo +
-                " " +
                 "Autor/a del libro: " + autor +
-                " " +
-                "Está disponible? }" + disponible;
+                "Está disponible?" + disponible +
+                "}";
     }
 
 

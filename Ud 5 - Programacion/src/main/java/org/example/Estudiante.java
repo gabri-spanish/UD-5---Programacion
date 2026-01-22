@@ -10,11 +10,16 @@ public class Estudiante {
     private int nia;
     private String email;
 
+
+
+    private libro libro;
+
     public Estudiante (String nombre, String curso, String email)  {
         this.nombre = nombre;
         this.curso = curso;
         this.email = email;
         nia = ++contadorEstudiantes;
+        libro = null;
     }
 
     public Estudiante (String nombre) {
@@ -31,6 +36,14 @@ public class Estudiante {
         } else {
             return false;
         }
+    }
+
+    public libro getLibro() {
+        return libro;
+    }
+
+    public void setLibro(libro libro) {
+        this.libro = libro;
     }
 
 
@@ -64,6 +77,17 @@ public class Estudiante {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", curso='" + curso + '\'' +
+                ", nia=" + nia +
+                ", email='" + email + '\'' +
+                ", libro=" + libro +
+                '}';
     }
 
 }
