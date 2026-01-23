@@ -1,4 +1,4 @@
-package org.example;
+package org.example.biblio;
 
 public class Estudiante {
 

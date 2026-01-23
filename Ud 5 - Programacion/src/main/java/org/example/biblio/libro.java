@@ -1,4 +1,4 @@
-package org.example;
+package org.example.biblio;
 
 public class libro {
 
@@ -11,8 +11,10 @@ public class libro {
     private static String autor;
     private static boolean disponible;
     private Estudiante estudiantePrestado;
+    private editorial editorial;
 
-    public libro(String titulo, String autor) {
+
+    public libro(String cumbresBorrascosas, String emilyBronte, editorial editorial) {
 
         this.titulo = titulo;
         this.autor = autor;
@@ -21,6 +23,7 @@ public class libro {
         cantidadLibros++;
         librosDisponibles++;
         estudiantePrestado = new Estudiante("");
+        this.editorial = editorial;
 
     }
 
@@ -35,6 +38,8 @@ public class libro {
             librosDisponibles--;
             estudiantePrestado = estudiante;
             estudiante.setLibro(this);
+        } else if (estudiante.getLibro() == null) {
+            System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado");
         } else {
             System.out.println("El libro " + titulo + " no está disponible");
         }
@@ -112,6 +117,15 @@ public class libro {
         this.estudiantePrestado = estudiantePrestado;
     }
 
+    public editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(editorial editorial) {
+        this.editorial = editorial;
+    }
+
+
     @Override
     public String toString() {
         return "libro{" +
@@ -120,7 +134,8 @@ public class libro {
                 "ID del libro: " + id +
                 "Título del libro: " + titulo +
                 "Autor/a del libro: " + autor +
-                "Está disponible?" + disponible +
+                "Está disponible?: " + disponible +
+                "Editorial: " + editorial +
                 "}";
     }
 
