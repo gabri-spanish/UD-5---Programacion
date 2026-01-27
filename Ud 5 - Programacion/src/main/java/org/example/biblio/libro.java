@@ -31,18 +31,26 @@ public class libro {
         return CADENA_ID+cantidadLibros;
     }
 
-    public void prestar(Estudiante estudiante){
-        if (disponible) {
+
+
+    public Prestamo prestar(Estudiante estudiante){
+
+        Prestamo prestamo = null;
+        if (disponible && estudiante.getLibro() == null) {
             disponible = false;
             System.out.println("El libro " + titulo + " ha sido prestado");
             librosDisponibles--;
             estudiantePrestado = estudiante;
             estudiante.setLibro(this);
+            prestamo = new Prestamo(this,estudiante);
         } else if (estudiante.getLibro() == null) {
             System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado");
         } else {
             System.out.println("El libro " + titulo + " no está disponible");
         }
+
+        return prestamo;
+
     }
 
     public void devolver(Estudiante estudiante) {

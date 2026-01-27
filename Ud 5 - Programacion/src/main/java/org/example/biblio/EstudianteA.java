@@ -11,7 +11,10 @@ public class EstudianteA {
         libro divina = new libro("Divina Comedia", "Dante Alighieri", millenium);
         System.out.println(divina);
 
-        divina.prestar(jorge);
+        Prestamo p1 = divina.prestar(jorge);
+
+        System.out.println(p1.getEstudiante());
+        System.out.println(p1.getFecha());
     }
 
 
