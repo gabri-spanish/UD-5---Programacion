@@ -1,15 +1,20 @@
 package org.example.inmobiliaria;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class casa {
 
+    static Scanner teclado = new Scanner(System.in);
 
     private String direccion;
     private ArrayList<habitacion> listaHabitaciones;
+    private propietario propietario;
     public casa(String direccion) {
         this.direccion = direccion;
         this.listaHabitaciones = new ArrayList<>();
+        setPropietario();
+
     }
 
     public void crearHabitacion(String nombre, double metros) {
@@ -26,8 +31,22 @@ public class casa {
         System.out.println("Habitación " + nombre + " creada.");
     }
 
+    public void eliminarHabitaciones(String nombre) {
+
+        for (habitacion habitacion : listaHabitaciones) {
+            if (habitacion.getNombre().equals(nombre)) {
+                listaHabitaciones.remove(habitacion);
+                System.out.println("Habitación " + nombre + " eliminada con éxito.");
+                return;
+            }
+        }
+
+        System.out.println("La habitación " + nombre + " no existe.");
+
+    }
+
     public void mostrarHabitaciones() {
-        System.out.println("Casa en " + direccion + " tiene " + listaHabitaciones.size() + " habitaciones.");
+        System.out.println("Casa en " + direccion + " con propietario siendo " + propietario.getNombre() + ", tiene " + listaHabitaciones.size() + " habitaciones.");
         for (habitacion habitacion : listaHabitaciones) {
             System.out.println("- " + habitacion.getNombre() + " (" + habitacion.getMetros() + ") metros cuadrados");
         }
@@ -62,6 +81,23 @@ public class casa {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+
+    public propietario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario() {
+        System.out.println("Introduce el nombre del propietario: ");
+        String nombre = teclado.next();
+        System.out.println("Edad: ");
+        int edad = teclado.nextInt();
+        teclado.nextLine();
+        propietario propietario = new propietario(nombre, edad);
+        this.propietario = propietario;
+        System.out.println("Propietario: " + nombre + " añadido.");
+    }
+
 
     @Override
     public String toString() {
