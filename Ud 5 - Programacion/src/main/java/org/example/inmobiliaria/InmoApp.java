@@ -18,7 +18,9 @@ public class InmoApp {
         pisito.mostrarHabitaciones();
 
         pisito.getListaHabitaciones().get(0).insertarElectrodomestico("horno", 50);
+        pisito.getListaHabitaciones().get(1).insertarElectrodomestico("lavadora", 120);
         System.out.println(pisito);
 
+        System.out.println(pisito.habitacionMasConsumo());
     }
 }

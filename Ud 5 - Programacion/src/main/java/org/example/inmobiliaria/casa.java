@@ -86,6 +86,7 @@ public class casa {
             }
         }
 
+        System.out.print("La habitación con mayor consumo es ");
         return maximo;
 
     }
