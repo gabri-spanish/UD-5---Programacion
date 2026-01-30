@@ -14,11 +14,11 @@ public class InmoApp {
         pisito.mostrarHabitaciones();
         System.out.println("La habitación más grande es " + pisito.getHabitacionMasGrande().getNombre());
 
+        pisito.eliminarHabitacion("dormitorio");
         pisito.mostrarHabitaciones();
 
-
-
-
+        pisito.getListaHabitaciones().get(0).insertarElectrodomestico("horno", 50);
+        System.out.println(pisito);
 
     }
 }
