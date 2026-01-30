@@ -1,22 +1,13 @@
 package org.example.inmobiliaria;
 
-public class electrodomestico {
+public class Electrodomestico {
 
     private String nombre;
     private double consumo;
 
-    public electrodomestico(String nombre, double consumo) {
-        this.nombre = nombre;
-        this.consumo = consumo;
-    }
-
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public Electrodomestico (String nombre, double consumo){
+        this.nombre=nombre;
+        this.consumo=consumo;
     }
 
     public double getConsumo() {
@@ -27,13 +18,20 @@ public class electrodomestico {
         this.consumo = consumo;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     @Override
     public String toString() {
-        return "electrodomestico{" +
+        return "Electrodomestico{" +
                 "nombre='" + nombre + '\'' +
                 ", consumo=" + consumo +
                 '}';
     }
-
 
 }

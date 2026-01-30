@@ -6,38 +6,38 @@ public class habitacion {
 
     private String nombre;
     private double metros;
-    private ArrayList<electrodomestico> listaElectrodomesticos;
+    private ArrayList<Electrodomestico> listaElectrodomesticos;
 
-    public habitacion(String nombre, double metros) {
-        this.nombre = nombre;
-        this.metros = metros;
+    public habitacion(String nombre, double metros){
+        this.metros=metros;
+        this.nombre=nombre;
+        listaElectrodomesticos = new ArrayList<>();
     }
 
-    public void crearElectrodomestico(String nombre, double consumo) {
-        for (electrodomestico electrodomestico : listaElectrodomesticos) {
-            if (electrodomestico.getNombre().equals(nombre)) {
-                System.out.println("El electrodoméstico, con un consumo de " + consumo + "kWh" + nombre + " ya existe");
-                return;
-            }
-        }
-
-        electrodomestico electrodomestico = new electrodomestico(nombre,metros);
+    public void insertarElectrodomestico(String nombre, double consumo){
+        Electrodomestico electrodomestico =  new Electrodomestico(nombre,consumo);
         listaElectrodomesticos.add(electrodomestico);
-        System.out.println("Electrodoméstico " + nombre + " creado.");
+        System.out.println(nombre + " añadido.");
     }
 
-    public void eliminarElectrodomesico(String nombre) {
+    public void mostrarElectrodomesticos(){
 
-        for (electrodomestico electrodomestico : listaElectrodomesticos) {
-            if (electrodomestico.getNombre().equals(nombre)) {
-                listaElectrodomesticos.remove(electrodomestico);
-                System.out.println("Electrodoméstico " + nombre + " eliminado con éxito.");
-                return;
-            }
+        System.out.println("Electrodomésticos de la habitación " + nombre);
+
+        for (Electrodomestico electrodomestico : listaElectrodomesticos){
+
+            System.out.println("- " + electrodomestico.getNombre() + " con un consumo de " + electrodomestico.getConsumo() + "kwh");
+
         }
 
-        System.out.println("El electrodomético " + nombre + " no existe.");
+    }
 
+    public double calcularConsumo(){
+        double consumo = 0;
+        for (Electrodomestico electrodomestico : listaElectrodomesticos){
+            consumo += electrodomestico.getConsumo();
+        }
+        return consumo;
     }
 
     public String getNombre() {
@@ -56,20 +56,15 @@ public class habitacion {
         this.metros = metros;
     }
 
-    public ArrayList<electrodomestico> getListaElectrodomesticos() {
-        return listaElectrodomesticos;
-    }
-
-    public void setListaElectrodomesticos(ArrayList<electrodomestico> listaElectrodomesticos) {
-        this.listaElectrodomesticos = listaElectrodomesticos;
-    }
-
     @Override
     public String toString() {
-        return "habitacion{" +
+        return "Habitacion{" +
                 "nombre='" + nombre + '\'' +
                 ", metros=" + metros +
+                ", electrodomesticos=" + listaElectrodomesticos +
                 '}';
     }
+
+
 
 }

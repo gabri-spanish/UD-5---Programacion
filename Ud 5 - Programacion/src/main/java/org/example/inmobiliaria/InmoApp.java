@@ -11,12 +11,12 @@ public class InmoApp {
         pisito.crearHabitacion("dormitorio", 21);
         pisito.crearHabitacion("dormitorio", 12);
 
-
         pisito.mostrarHabitaciones();
         System.out.println("La habitación más grande es " + pisito.getHabitacionMasGrande().getNombre());
 
-        pisito.eliminarHabitaciones("baño");
         pisito.mostrarHabitaciones();
+
+
 
 
 
