@@ -1,6 +1,6 @@
 # Práctica 1. Practica de compra-venta de casas
 
-![]([https://github.com/gabri-spanish/UD-5---Programacion/blob/main/Ud%205%20-%20Programacion/src/main/java/org/example/inmobiliaria/media/biblio.png](https://github.com/gabri-spanish/UD-5---Programacion/blob/main/Ud%205%20-%20Programacion/src/main/java/org/example/inmobiliaria/media/18170915_111825-wabc-epstein-img.jpg))
+![]([https://github.com/gabri-spanish/UD-5---Programacion/blob/main/Ud%205%20-%20Programacion/src/main/java/org/example/inmobiliaria/media/biblio.png])
 
 ## ÍNDICE
 1. [Intro](https://github.com/gabri-spanish/UD-5---Programacion/blob/main/Ud%205%20-%20Programacion/src/main/java/org/example/inmobiliaria/practica1.md#1-intro#1-intro) 
