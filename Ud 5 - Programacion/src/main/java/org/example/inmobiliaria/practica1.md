@@ -10,6 +10,7 @@
 ### 1. Intro
 
 ### 2. Estructura de clases
+![](https://github.com/gabri-spanish/UD-5---Programacion/blob/main/Ud%205%20-%20Programacion/src/main/java/org/example/inmobiliaria/media/biblio.png)
 
 ### 3. Programa principal (InmoApp)
 
