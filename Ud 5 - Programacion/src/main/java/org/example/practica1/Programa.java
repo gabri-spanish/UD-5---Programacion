@@ -68,10 +68,6 @@ public class Programa {
         this.empleado = empleado;
     }
 
-    public void insertarEmpleado(String nombre, String cargo, String puesto) {
-        return Empleado;
-    }
-
     @Override
     public String toString() {
         return "Programa{" +
