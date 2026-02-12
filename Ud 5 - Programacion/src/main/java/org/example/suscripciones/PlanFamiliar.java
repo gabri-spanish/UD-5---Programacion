@@ -14,8 +14,13 @@ public class PlanFamiliar extends Subscripcion{
     }
 
     @Override
-    public String obtenerBeneficios() {
-        return "Acceso para varios perfiles simultáneamente en alta definición.";
+    public void obtenerBeneficios() {
+        System.out.println("Acceso para varios perfiles simultáneamente en alta definición.");
+    }
+
+    @Override
+    public void obtenerPeriodoPrueba() {
+        System.out.println("7 días de prueba para cuentas nuevas");
     }
 
 }

@@ -8,17 +8,21 @@ public class PlanPremium extends Subscripcion{
 
     }
 
+
     @Override
     public void mostrarInfo() {
         super.mostrarInfo();
     }
 
     @Override
-    public String obtenerBeneficios() {
-        return "Acceso a todo el contenido en alta definición y descargas offline.";
+    public void obtenerBeneficios() {
+        System.out.println("Acceso a todo el contenido en alta definición y descargas offline.");
     }
 
-
+    @Override
+    public void obtenerPeriodoPrueba() {
+        System.out.println("14 días de prueba gratuita");
+    }
 
 
 }

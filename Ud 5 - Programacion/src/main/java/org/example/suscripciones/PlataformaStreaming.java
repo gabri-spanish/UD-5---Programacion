@@ -10,8 +10,19 @@ public class PlataformaStreaming {
         PlanGratis gratis = new PlanGratis("Gratis", 0);
         listaSuscripciones.add(gratis);
 
-        PlanFamiliar familiar = new PlanFamiliar("Plan familiar", 0);
+        PlanBasico basico = new PlanBasico("Basico", 9.99);
+        listaSuscripciones.add(basico);
+
+        PlanPremium premium = new PlanPremium("Premium", 14.99);
+        listaSuscripciones.add(premium);
+
+        PlanFamiliar familiar = new PlanFamiliar("Familiar", 19.99);
         listaSuscripciones.add(familiar);
+
+        for (Subscripcion subscripcion : listaSuscripciones) {
+            subscripcion.mostrarInfo();
+            subscripcion.obtenerBeneficios();
+        }
 
 
     }

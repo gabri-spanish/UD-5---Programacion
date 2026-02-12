@@ -18,7 +18,9 @@ public abstract class Subscripcion {
         System.out.println("Precio total " + precio);
     }
 
-    public abstract String obtenerBeneficios();
+    public abstract void obtenerBeneficios();
+
+    public abstract void obtenerPeriodoPrueba();
 
     public String getNombrePlan() {
         return nombrePlan;

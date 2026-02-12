@@ -14,8 +14,12 @@ public class PlanBasico extends Subscripcion {
     }
 
     @Override
-    public String obtenerBeneficios() {
-        return "Acceso a todo el contenido en calidad estándar sin anuncios.";
+    public void obtenerBeneficios() {
+        System.out.println("Acceso a todo el contenido en calidad estándar sin anuncios.");
     }
 
+    @Override
+    public void obtenerPeriodoPrueba() {
+        System.out.println("30 días de prueba gratuita");
+    }
 }
