@@ -58,19 +58,7 @@ public class Equipo {
 
     }
 
-    public void verMedallasDeportista(Deportista deportista){
 
-        if (listaDeportistas.contains(deportista)){
-            if (deportista.getMedallas()==0){
-                System.out.println("\n El deportista " + deportista.getNombre() + " de " + pais + " no ha ganado ninguna medalla durante estos JJOO.");
-            }else{
-                System.out.println("\n El deportista " + deportista.getNombre() +  " ha ganado " + deportista.getMedallas() + " medallas.");
-            }
-        }else{
-            System.out.println("\n El deportista " + deportista.getNombre() + " no pertenece al equipo de " + pais);
-        }
-
-    }
 
     public Deportista deportistaMasJoven(){
 

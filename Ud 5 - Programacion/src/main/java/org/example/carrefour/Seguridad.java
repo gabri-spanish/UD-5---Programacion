@@ -14,7 +14,6 @@ public class Seguridad extends Persona {
     public Seguridad(int codigo, String nombre, double sueldo, String empresa) {
         super(codigo, nombre, sueldo);
         setEmpresa();
-        setArmas();
     }
 
     public String getEmpresa() {

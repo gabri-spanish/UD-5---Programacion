@@ -23,6 +23,10 @@ public class Cajero extends Persona {
         caja = teclado.nextInt();
     }
 
+    public void trabajar() {
+        System.out.println("Cobrando productos...");
+    }
+
     @Override
     public void mostrarInfo() {
         super.mostrarInfo();

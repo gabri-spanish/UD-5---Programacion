@@ -10,7 +10,6 @@ public class EmpleadosApp {
          Juan.mostrarInfo();
 
          Seguridad Carlos = new Seguridad(123, "Carlos", 900, "FaliyoCorp");
-         Carlos.insertarArmas("porra");
 
     }
 }

@@ -1,6 +1,6 @@
 package org.example.carrefour;
 
-public class Persona {
+public abstract class Persona {
 
     private int codigo;
     private String nombre;
