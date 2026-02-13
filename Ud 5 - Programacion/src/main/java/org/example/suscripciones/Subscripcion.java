@@ -14,8 +14,8 @@ public abstract class Subscripcion {
     }
 
     public void mostrarInfo() {
-        System.out.println("Nombre del plan " + nombrePlan);
-        System.out.println("Precio total " + precio);
+        System.out.println("Nombre del plan: " + nombrePlan);
+        System.out.println("Precio total: " + precio + "€");
     }
 
     public abstract void obtenerBeneficios();

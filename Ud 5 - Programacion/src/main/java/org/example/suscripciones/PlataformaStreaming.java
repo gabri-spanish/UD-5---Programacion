@@ -22,6 +22,7 @@ public class PlataformaStreaming {
         for (Subscripcion subscripcion : listaSuscripciones) {
             subscripcion.mostrarInfo();
             subscripcion.obtenerBeneficios();
+            subscripcion.obtenerPeriodoPrueba();
         }
 
 

@@ -1,5 +1,6 @@
 package org.example.suscripciones;
 
+
 public class PlanBasico extends Subscripcion {
 
     public PlanBasico(String nombrePlan, double precio) {
@@ -21,5 +22,6 @@ public class PlanBasico extends Subscripcion {
     @Override
     public void obtenerPeriodoPrueba() {
         System.out.println("30 días de prueba gratuita");
+        System.out.println();
     }
 }
