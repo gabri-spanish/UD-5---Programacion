@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class TarjetaCredito extends MetodoPago {
 
-    private final String FORMATO_TARJETA="\\d{16}";
+    private final String FORMATO_TARJETA = "\\d{16}";
     private String nro_tarjeta;
-    private ArrayList<String>tipos;
+    private ArrayList<String> tipos;
 
     public void validarTarjeta() {
         if (!nro_tarjeta.matches(FORMATO_TARJETA)) {
