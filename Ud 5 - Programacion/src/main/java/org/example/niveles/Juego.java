@@ -1,7 +1,5 @@
 package org.example.niveles;
 
-import org.example.prueba_enum.Tarjetas;
-
 import java.util.Random;
 import java.util.Scanner;
 
