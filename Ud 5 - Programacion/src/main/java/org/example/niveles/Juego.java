@@ -17,6 +17,5 @@ public class Juego {
         final int puntuacion_final = puntu * dificultad_tipo.getMultiplicador();
         System.out.println("Puntuación obtenida: " + puntu);
         System.out.println("Puntuación final: " + puntuacion_final);
-
     }
 }
