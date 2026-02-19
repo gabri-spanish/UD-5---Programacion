@@ -1,7 +1,7 @@
 package org.example.excepciones.CuentaBancaria;
 
-public class SaldoExc extends RuntimeException {
-    public SaldoExc() {
+public class SaldoInsuficienteException extends RuntimeException {
+    public SaldoInsuficienteException() {
         super("No cuentas con suficiente saldo en tu cuenta...");
     }
 }
