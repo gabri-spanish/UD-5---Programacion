@@ -4,5 +4,4 @@ public interface AccionesDeportivas {
 
     void entrenar();
     void JugarPartido(String rival);
-
 }

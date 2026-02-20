@@ -5,25 +5,15 @@ public class Entrenador extends OrihuelaCF implements AccionesDeportivas {
     private Equipos equipo;
     private String formacionPreferida;
 
-    public Entrenador(String nombre, int edad) {
+    public Entrenador(String nombre, int edad, Equipos equipo, String formacionPreferida) {
         super(nombre, edad);
-    }
-
-    public void concentrarse() {
-
-    }
-
-    public void viajar(String ciudad) {
-
-    }
-
-    public void celebrarGol() {
-
+        this.equipo = equipo;
+        this.formacionPreferida = formacionPreferida;
     }
 
     @Override
     public void entrenar() {
-
+        System.out.println("Preparando el entrenamiento antes del partidazo...");
     }
 
     @Override
