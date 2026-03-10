@@ -22,6 +22,7 @@ public class ej4 {
                 System.out.println("0. Salir");
                 System.out.print("Selecciona una opción: ");
 
+
                 opcion = teclado.nextInt();
                 teclado.nextLine();
 
