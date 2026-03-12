@@ -82,10 +82,10 @@ public class DiccionarioApp {
             String correcta = dic.traduce(palabra);
 
             if (respuesta.equals(correcta)) {
-                System.out.println("¡CORRECTO!");
+                System.out.println("CORRECTO!");
                 aciertos++;
             } else {
-                System.out.println("¡NO! La respuesta correcta es " + correcta);
+                System.out.println("INCORRECTO! La respuesta correcta es " + correcta);
             }
         }
 
